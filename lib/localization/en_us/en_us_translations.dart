@@ -1,0 +1,37 @@
+final Map<String, String> enUs = {
+  'msg_network_err': 'Network Error',
+  'msg_something_went_wrong': 'Something Went Wrong!',
+  "lbl_email": "@email",
+  "lbl_dashboard": "dashboard",
+  "lbl_dashboard_one": "dashboard One",
+  "lbl_next": "Next →",
+  "msg_enter_your_deta": "Enter your details:",
+  "lbl_home": "Home",
+  "msg_enter_your_name": "Enter your name:",
+  "lbl_items_available": "Items available",
+  "msg_welcome_to_2han": "Welcome to 2hand dealers",
+  "lbl_app_navigation": "App Navigation",
+  "msg_enter_your_pass": "Enter your password:",
+  "lbl_log_in": "Log in",
+  "msg_your_profile_is": "Your profile is set up!",
+  "lbl_registration": "registration ",
+  "lbl_search_here": "Search here...",
+  "lbl_log_out": "Log out",
+  "msg_do_you_have_an": "Do you have an account?",
+  "msg_2hand_dealers_w":
+      "2hand dealers will facilitate any sale of a used item or purchase of one.\nRemember, rules and regulations apply!",
+  "lbl_login2": "login",
+  "msg_enter_your_emai": "Enter your email:",
+  "msg_check_your_app":
+      "Check your app's UI from the below demo screens of your app.",
+  "lbl_get_started": "Get started",
+  "lbl_sign_up": "Sign up",
+  "lbl_splash_screen": "Splash screen",
+  "lbl_password": "@password",
+  "lbl_name": "@name",
+  "msg_2hand_dealers_e":
+      "2hand dealers enables you to buy or sell used electronics through online customer to customer services",
+  "lbl_register": "    Register",
+  "msg_confirm_your_pa": "Confirm your password:",
+  "lbl_account": "Account"
+};
