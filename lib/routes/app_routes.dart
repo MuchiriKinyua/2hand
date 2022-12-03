@@ -1,16 +1,16 @@
-import 'package:muchiri_s_application7/presentation/splash_screen/splash_screen.dart';
-import 'package:muchiri_s_application7/presentation/splash_screen/binding/splash_binding.dart';
-import 'package:muchiri_s_application7/presentation/registration_screen/registration_screen.dart';
-import 'package:muchiri_s_application7/presentation/registration_screen/binding/registration_binding.dart';
-import 'package:muchiri_s_application7/presentation/login_screen/login_screen.dart';
-import 'package:muchiri_s_application7/presentation/login_screen/binding/login_binding.dart';
-import 'package:muchiri_s_application7/presentation/dashboard_screen/dashboard_screen.dart';
-import 'package:muchiri_s_application7/presentation/dashboard_screen/binding/dashboard_binding.dart';
-import 'package:muchiri_s_application7/presentation/dashboard_one_screen/dashboard_one_screen.dart';
-import 'package:muchiri_s_application7/presentation/dashboard_one_screen/binding/dashboard_one_binding.dart';
+import 'package:get/get.dart';
 import 'package:muchiri_s_application7/presentation/app_navigation_screen/app_navigation_screen.dart';
 import 'package:muchiri_s_application7/presentation/app_navigation_screen/binding/app_navigation_binding.dart';
-import 'package:get/get.dart';
+import 'package:muchiri_s_application7/presentation/dashboard_one_screen/binding/dashboard_one_binding.dart';
+import 'package:muchiri_s_application7/presentation/dashboard_one_screen/dashboard_one_screen.dart';
+import 'package:muchiri_s_application7/presentation/dashboard_screen/binding/dashboard_binding.dart';
+import 'package:muchiri_s_application7/presentation/dashboard_screen/profile_screen.dart';
+import 'package:muchiri_s_application7/presentation/login_screen/binding/login_binding.dart';
+import 'package:muchiri_s_application7/presentation/login_screen/login_screen.dart';
+import 'package:muchiri_s_application7/presentation/registration_screen/binding/registration_binding.dart';
+import 'package:muchiri_s_application7/presentation/registration_screen/registration_screen.dart';
+import 'package:muchiri_s_application7/presentation/splash_screen/binding/splash_binding.dart';
+import 'package:muchiri_s_application7/presentation/splash_screen/splash_screen.dart';
 
 class AppRoutes {
   static String splashScreen = '/splash_screen';

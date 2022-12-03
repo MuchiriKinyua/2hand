@@ -1,6 +1,7 @@
-import 'controller/dashboard_one_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:muchiri_s_application7/core/app_export.dart';
+
+import 'controller/dashboard_one_controller.dart';
 
 class DashboardOneScreen extends GetWidget<DashboardOneController> {
   @override
@@ -165,7 +166,7 @@ class DashboardOneScreen extends GetWidget<DashboardOneController> {
                                                                             top:
                                                                                 3),
                                                                         child: Text(
-                                                                            "lbl_account"
+                                                                            "lbl_profile"
                                                                                 .tr,
                                                                             overflow:
                                                                                 TextOverflow.ellipsis,

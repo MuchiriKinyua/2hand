@@ -1,8 +1,9 @@
-import 'controller/registration_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:muchiri_s_application7/core/app_export.dart';
 import 'package:muchiri_s_application7/core/utils/validation_functions.dart';
 import 'package:muchiri_s_application7/widgets/custom_text_form_field.dart';
+
+import 'controller/registration_controller.dart';
 
 // ignore_for_file: must_be_immutable
 class RegistrationScreen extends GetWidget<RegistrationController> {
@@ -159,6 +160,25 @@ class RegistrationScreen extends GetWidget<RegistrationController> {
                                     return null;
                                   },
                                   isObscureText: true),
+                              Padding(
+                                  padding: getPadding(bottom: 6),
+                                  child: Text("Do you have an account?",
+                                      overflow: TextOverflow.ellipsis,
+                                      textAlign: TextAlign.left,
+                                      style: AppStyle.txtInterRegular14)),
+                              GestureDetector(
+                                  onTap: () {
+                                    onTapTxtSignin();
+                                  },
+                                  child: Container(
+                                      margin: getMargin(left: 2, top: 1),
+                                      padding: getPadding(left: 5, right: 5),
+                                      decoration:
+                                          AppDecoration.txtFillBluegray500,
+                                      child: Text("lbl_sign_in".tr,
+                                          overflow: TextOverflow.ellipsis,
+                                          textAlign: TextAlign.left,
+                                          style: AppStyle.txtInterRegular14))),
                               GestureDetector(
                                   onTap: () {
                                     onTapTxtRegister();
@@ -183,6 +203,12 @@ class RegistrationScreen extends GetWidget<RegistrationController> {
   }
 
   onTapTxtRegister() {
+    Get.toNamed(AppRoutes.loginScreen);
+  }
+
+  // ignore: non_constant_identifier_names
+
+  void onTapTxtSignin() {
     Get.toNamed(AppRoutes.loginScreen);
   }
 }

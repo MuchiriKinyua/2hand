@@ -1,6 +1,7 @@
-import 'controller/dashboard_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:muchiri_s_application7/core/app_export.dart';
+
+import 'controller/dashboard_controller.dart';
 
 class DashboardScreen extends GetWidget<DashboardController> {
   @override

@@ -18,14 +18,17 @@ final Map<String, String> enUs = {
   "lbl_search_here": "Search here...",
   "lbl_log_out": "Log out",
   "msg_do_you_have_an": "Do you have an account?",
+  "msg_do_you_have_an2": "Do you have an account?",
   "msg_2hand_dealers_w":
       "2hand dealers will facilitate any sale of a used item or purchase of one.\nRemember, rules and regulations apply!",
   "lbl_login2": "login",
   "msg_enter_your_emai": "Enter your email:",
+  "msg_enter_your_name2": "Enter your name:",
   "msg_check_your_app":
       "Check your app's UI from the below demo screens of your app.",
   "lbl_get_started": "Get started",
   "lbl_sign_up": "Sign up",
+  "lbl_sign_in": "Sign in",
   "lbl_splash_screen": "Splash screen",
   "lbl_password": "@password",
   "lbl_name": "@name",
@@ -33,5 +36,6 @@ final Map<String, String> enUs = {
       "2hand dealers enables you to buy or sell used electronics through online customer to customer services",
   "lbl_register": "    Register",
   "msg_confirm_your_pa": "Confirm your password:",
-  "lbl_account": "Account"
+  "lbl_account": "Do you have an account?",
+  "lbl_profile": "Your profile"
 };
