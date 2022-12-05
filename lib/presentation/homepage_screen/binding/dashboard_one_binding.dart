@@ -1,5 +1,6 @@
-import '../controller/dashboard_one_controller.dart';
 import 'package:get/get.dart';
+
+import '../controller/homepage_controller.dart';
 
 class DashboardOneBinding extends Bindings {
   @override

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:muchiri_s_application7/core/app_export.dart';
 
-import 'controller/dashboard_one_controller.dart';
+import 'controller/homepage_controller.dart';
 
 class DashboardOneScreen extends GetWidget<DashboardOneController> {
   @override
