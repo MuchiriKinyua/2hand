@@ -1,4 +1,4 @@
-import 'package:muchiri_s_application7/presentation/homepage2_screen/models/dashboard_one_model.dart';
+import 'package:muchiri_s_application7/presentation/homepage2_screen/models/homepage2_model.dart';
 
 import '/core/app_export.dart';
 
