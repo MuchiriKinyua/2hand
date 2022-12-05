@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 
-import '../controller/homepage_controller.dart';
+import '../controller/homepage2_controller.dart';
 
-class DashboardOneBinding extends Bindings {
+class Homepage2Binding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut(() => DashboardOneController());

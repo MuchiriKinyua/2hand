@@ -3,7 +3,7 @@ import 'package:muchiri_s_application7/presentation/homepage2_screen/models/dash
 import '/core/app_export.dart';
 
 class DashboardOneController extends GetxController {
-  Rx<DashboardOneModel> dashboardOneModelObj = DashboardOneModel().obs;
+  Rx<Homepage2Model> dashboardOneModelObj = Homepage2Model().obs;
 
   @override
   void onReady() {

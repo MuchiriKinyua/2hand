@@ -1,1 +1,1 @@
-class DashboardOneModel {}
+class Homepage2Model {}
