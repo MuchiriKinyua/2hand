@@ -19,6 +19,8 @@ class AppRoutes {
 
   static String loginScreen = '/login_screen';
 
+  static String profileScreen = '/profile_screen';
+
   static String mpesaScreen = '/mpesa_screen';
 
   static String dashboardScreen = '/dashboard_screen';

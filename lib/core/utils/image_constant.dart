@@ -16,4 +16,10 @@ class ImageConstant {
   static var imgScreenshot2022118x123;
 
   static var imgRectangle32;
+
+  static var imgButton;
+
+  static var imgScreenshot2022;
+
+  static var imgSearch;
 }
