@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       translations: AppLocalization(),
       locale: Get.deviceLocale, //for setting localization strings
       fallbackLocale: Locale('en', 'US'),
-      title: 'muchiri_s_application7',
+      title: '2hand',
       initialBinding: InitialBindings(),
       initialRoute: AppRoutes.initialRoute,
       getPages: AppRoutes.pages,

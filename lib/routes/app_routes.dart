@@ -1,6 +1,4 @@
 import 'package:get/get.dart';
-import 'package:muchiri_s_application7/presentation/app_navigation2_screen/app_navigation2_screen.dart';
-import 'package:muchiri_s_application7/presentation/app_navigation2_screen/binding/app_navigation2_binding.dart';
 import 'package:muchiri_s_application7/presentation/login_screen/binding/login_binding.dart';
 import 'package:muchiri_s_application7/presentation/login_screen/login_screen.dart';
 import 'package:muchiri_s_application7/presentation/profile_screen/binding/profile_binding.dart';
@@ -9,6 +7,19 @@ import 'package:muchiri_s_application7/presentation/registration_screen/binding/
 import 'package:muchiri_s_application7/presentation/registration_screen/registration_screen.dart';
 import 'package:muchiri_s_application7/presentation/splash_screen/binding/splash_binding.dart';
 import 'package:muchiri_s_application7/presentation/splash_screen/splash_screen.dart';
+
+import '../presentation/app_navigation_screen/app_navigation_screen.dart';
+import '../presentation/app_navigation_screen/binding/app_navigation_binding.dart';
+import '../presentation/homepage_screen/binding/homepage_binding.dart';
+import '../presentation/homepage_screen/homepage_screen.dart';
+import '../presentation/mpesa_screen/binding/mpesa_binding.dart';
+import '../presentation/mpesa_screen/mpesa_screen.dart';
+import '../presentation/post_items_screen/binding/post_items_binding.dart';
+import '../presentation/post_items_screen/post_items_screen.dart';
+import '../presentation/radio_screen/binding/radio_binding.dart';
+import '../presentation/radio_screen/radio_screen.dart';
+import '../presentation/tv_screen/binding/tv_binding.dart';
+import '../presentation/tv_screen/tv_screen.dart';
 
 class AppRoutes {
   static String splashScreen = '/splash_screen';
@@ -26,6 +37,8 @@ class AppRoutes {
   static String homepageScreen = '/homepage_screen';
 
   static String dashboardOneScreen = '/dashboard_one_screen';
+
+  static String radioScreen = '/radio_screen';
 
   static String appNavigationScreen = '/app_navigation_screen';
 
@@ -58,17 +71,52 @@ class AppRoutes {
       ],
     ),
     GetPage(
-      name: dashboardScreen,
+      name: profileScreen,
       page: () => ProfileScreen(),
       bindings: [
         ProfileBinding(),
       ],
     ),
     GetPage(
-      name: appNavigationScreen,
-      page: () => AppNavigation2Screen(),
+      name: homepageScreen,
+      page: () => HomepageScreen(),
       bindings: [
-        AppNavigation2Binding(),
+        HomepageBinding(),
+      ],
+    ),
+    GetPage(
+      name: postItemsScreen,
+      page: () => PostItemsScreen(),
+      bindings: [
+        PostItemsBinding(),
+      ],
+    ),
+    GetPage(
+      name: mpesaScreen,
+      page: () => MpesaScreen(),
+      bindings: [
+        MpesaBinding(),
+      ],
+    ),
+    GetPage(
+      name: radioScreen,
+      page: () => RadioScreen(),
+      bindings: [
+        RadioBinding(),
+      ],
+    ),
+    GetPage(
+      name: tvScreen,
+      page: () => TvScreen(),
+      bindings: [
+        TvBinding(),
+      ],
+    ),
+    GetPage(
+      name: appNavigationScreen,
+      page: () => AppNavigationScreen(),
+      bindings: [
+        AppNavigationBinding(),
       ],
     ),
     GetPage(
