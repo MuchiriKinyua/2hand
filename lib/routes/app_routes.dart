@@ -23,6 +23,8 @@ class AppRoutes {
 
   static String dashboardScreen = '/dashboard_screen';
 
+  static String homepageScreen = '/homepage_screen';
+
   static String dashboardOneScreen = '/dashboard_one_screen';
 
   static String appNavigationScreen = '/app_navigation_screen';
