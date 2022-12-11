@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:muchiri_s_application7/presentation/app_navigation_screen/app_navigation_screen.dart';
-import 'package:muchiri_s_application7/presentation/app_navigation_screen/binding/app_navigation_binding.dart';
+import 'package:muchiri_s_application7/presentation/app_navigation2_screen/app_navigation2_screen.dart';
+import 'package:muchiri_s_application7/presentation/app_navigation2_screen/binding/app_navigation2_binding.dart';
 import 'package:muchiri_s_application7/presentation/login_screen/binding/login_binding.dart';
 import 'package:muchiri_s_application7/presentation/login_screen/login_screen.dart';
 import 'package:muchiri_s_application7/presentation/profile_screen/binding/dashboard_binding.dart';
@@ -66,9 +66,9 @@ class AppRoutes {
     ),
     GetPage(
       name: appNavigationScreen,
-      page: () => AppNavigationScreen(),
+      page: () => AppNavigation2Screen(),
       bindings: [
-        AppNavigationBinding(),
+        AppNavigation2Binding(),
       ],
     ),
     GetPage(

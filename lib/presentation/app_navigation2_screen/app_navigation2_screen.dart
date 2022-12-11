@@ -1,8 +1,9 @@
-import 'controller/app_navigation_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:muchiri_s_application7/core/app_export.dart';
 
-class AppNavigationScreen extends GetWidget<AppNavigationController> {
+import 'controller/app_navigation2_controller.dart';
+
+class AppNavigation2Screen extends GetWidget<AppNavigation2Controller> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
