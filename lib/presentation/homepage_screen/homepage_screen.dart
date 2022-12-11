@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+// ignore: unnecessary_import
+import 'package:get/get_core/src/get_main.dart';
 
 import '../../core/utils/color_constant.dart';
 import '../../core/utils/image_constant.dart';
@@ -7,7 +9,9 @@ import '../../core/utils/size_utils.dart';
 import '../../routes/app_routes.dart';
 import '../../theme/app_decoration.dart';
 import '../../theme/app_style.dart';
+import '../../widgets/app_bar/custom_app_bar.dart';
 import '../../widgets/common_image_view.dart';
+import '../../widgets/custom_button.dart';
 import 'controller/homepage_controller.dart';
 
 class HomepageScreen extends GetWidget<HomepageController> {
