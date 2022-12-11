@@ -216,6 +216,17 @@ class HomepageScreen extends GetWidget<HomepageController> {
                                                 ButtonFontStyle.InterRegular16,
                                             onTap: onTapPostitem,
                                             alignment: Alignment.center),
+                                        CustomButton(
+                                            width: 100,
+                                            text: "lbl_post_item2".tr,
+                                            margin: getMargin(
+                                                left: 22, top: 1, right: 22),
+                                            variant:
+                                                ButtonVariant.FillBluegray100,
+                                            fontStyle:
+                                                ButtonFontStyle.InterRegular16,
+                                            onTap: onTapPostitem2,
+                                            alignment: Alignment.center),
                                         Align(
                                             alignment: Alignment.centerLeft,
                                             child: Padding(
@@ -289,6 +300,10 @@ class HomepageScreen extends GetWidget<HomepageController> {
 
   onTapPostitem() {
     Get.toNamed(AppRoutes.postItemsScreen);
+  }
+
+  onTapPostitem2() {
+    Get.toNamed(AppRoutes.tvScreen);
   }
 
   onTapImgScreenshot2022() {

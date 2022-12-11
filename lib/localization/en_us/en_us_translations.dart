@@ -7,6 +7,7 @@ final Map<String, String> enUs = {
   "lbl_next": "Next →",
   "msg_enter_your_deta": "Enter your details:",
   "lbl_home": "Home",
+  "lbl_post_item2": "Mpesa",
   "msg_enter_your_name": "Enter your name:",
   "lbl_items_available": "Items available",
   "msg_welcome_to_2han": "Welcome to 2hand dealers",
