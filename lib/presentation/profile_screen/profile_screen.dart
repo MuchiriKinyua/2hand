@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:muchiri_s_application7/core/app_export.dart';
 
-import 'controller/dashboard_controller.dart';
+import 'controller/profile_controller.dart';
 
-class DashboardScreen extends GetWidget<DashboardController> {
+class ProfileScreen extends GetWidget<ProfileController> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(

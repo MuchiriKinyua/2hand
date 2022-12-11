@@ -3,7 +3,7 @@ import 'package:muchiri_s_application7/presentation/app_navigation2_screen/app_n
 import 'package:muchiri_s_application7/presentation/app_navigation2_screen/binding/app_navigation2_binding.dart';
 import 'package:muchiri_s_application7/presentation/login_screen/binding/login_binding.dart';
 import 'package:muchiri_s_application7/presentation/login_screen/login_screen.dart';
-import 'package:muchiri_s_application7/presentation/profile_screen/binding/dashboard_binding.dart';
+import 'package:muchiri_s_application7/presentation/profile_screen/binding/profile_binding.dart';
 import 'package:muchiri_s_application7/presentation/profile_screen/profile_screen.dart';
 import 'package:muchiri_s_application7/presentation/registration_screen/binding/registration_binding.dart';
 import 'package:muchiri_s_application7/presentation/registration_screen/registration_screen.dart';
@@ -59,9 +59,9 @@ class AppRoutes {
     ),
     GetPage(
       name: dashboardScreen,
-      page: () => DashboardScreen(),
+      page: () => ProfileScreen(),
       bindings: [
-        DashboardBinding(),
+        ProfileBinding(),
       ],
     ),
     GetPage(
