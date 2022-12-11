@@ -19,11 +19,17 @@ class AppRoutes {
 
   static String loginScreen = '/login_screen';
 
+  static String mpesaScreen = '/mpesa_screen';
+
   static String dashboardScreen = '/dashboard_screen';
 
   static String dashboardOneScreen = '/dashboard_one_screen';
 
   static String appNavigationScreen = '/app_navigation_screen';
+
+  static String tvScreen = '/tv_screen';
+
+  static String postItemsScreen = '/post_items_screen';
 
   static String initialRoute = '/initialRoute';
 
