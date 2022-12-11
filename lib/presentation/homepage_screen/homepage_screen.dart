@@ -278,6 +278,55 @@ class HomepageScreen extends GetWidget<HomepageController> {
                                                           width:
                                                               getHorizontalSize(
                                                                   51.00))
+                                                    ]))),
+                                        Align(
+                                            alignment: Alignment.center,
+                                            child: Padding(
+                                                padding: getPadding(
+                                                    left: 22,
+                                                    top: 10,
+                                                    right: 20),
+                                                child: Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .center,
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    children: [
+                                                      Container(
+                                                          height:
+                                                              getVerticalSize(
+                                                                  101.00),
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  52.00),
+                                                          decoration: AppDecoration
+                                                              .fillBluegray100,
+                                                          child: Stack(
+                                                              children: [
+                                                                Align(
+                                                                    alignment:
+                                                                        Alignment
+                                                                            .centerLeft,
+                                                                    child: InkWell(
+                                                                        onTap: () {
+                                                                          onTapImgRectangle32();
+                                                                        },
+                                                                        child: CommonImageView(imagePath: ImageConstant.imgScreenshot2022, height: getVerticalSize(200.00), width: getHorizontalSize(52.00))))
+                                                              ])),
+                                                      CommonImageView(
+                                                          imagePath:
+                                                              ImageConstant
+                                                                  .imgButton,
+                                                          height:
+                                                              getVerticalSize(
+                                                                  101.00),
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  51.00))
                                                     ])))
                                       ])))
                         ]))))));
@@ -293,5 +342,9 @@ class HomepageScreen extends GetWidget<HomepageController> {
 
   onTapImgScreenshot2022() {
     Get.toNamed(AppRoutes.tvScreen);
+  }
+
+  onTapImgRectangle32() {
+    Get.toNamed(AppRoutes.radioScreen);
   }
 }
