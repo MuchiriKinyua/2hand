@@ -19,7 +19,7 @@ class ImageConstant {
 
   static var imgButton;
 
-  static var imgScreenshot2022;
+  static var imgScreenshot2022 = 'assets/images/img_screenshot2022.png.png';
 
   static var imgSearch;
 }
