@@ -126,6 +126,7 @@ enum ButtonPadding {
 enum ButtonVariant {
   FillTeal401,
   FillBluegray100,
+  FillIndigoA200,
 }
 
 enum ButtonFontStyle {

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:muchiri_s_application7/core/app_export.dart';
 
 class AppDecoration {
+  static var fillCyan200;
+
   static BoxDecoration get txtFillPink700 => BoxDecoration(
         color: ColorConstant.pink700,
       );

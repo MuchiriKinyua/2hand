@@ -17,6 +17,12 @@ class MpesaController extends GetxController {
 
   Rx<MpesaModel> mpesaModelObj = MpesaModel().obs;
 
+  get phoneInputController => null;
+
+  get quantityInputController => null;
+
+  get amountInputController => null;
+
   @override
   void onReady() {
     super.onReady();
