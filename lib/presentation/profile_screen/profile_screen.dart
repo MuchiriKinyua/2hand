@@ -120,7 +120,7 @@ class ProfileScreen extends GetWidget<ProfileController> {
   }
 
   onTapTxtGetstarted() {
-    Get.toNamed(AppRoutes.dashboardOneScreen);
+    Get.toNamed(AppRoutes.homepageScreen);
   }
 
   onTapTxtLogout() {

@@ -1,8 +1,9 @@
-import 'controller/login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:muchiri_s_application7/core/app_export.dart';
 import 'package:muchiri_s_application7/core/utils/validation_functions.dart';
 import 'package:muchiri_s_application7/widgets/custom_text_form_field.dart';
+
+import 'controller/login_controller.dart';
 
 // ignore_for_file: must_be_immutable
 class LoginScreen extends GetWidget<LoginController> {
@@ -177,7 +178,7 @@ class LoginScreen extends GetWidget<LoginController> {
   }
 
   onTapTxtLogin() {
-    Get.toNamed(AppRoutes.dashboardScreen);
+    Get.toNamed(AppRoutes.profileScreen);
   }
 
   onTapTxtSignup() {

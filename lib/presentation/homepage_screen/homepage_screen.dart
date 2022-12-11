@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-import '../../core/app_export.dart';
+import '../../core/utils/color_constant.dart';
+import '../../core/utils/image_constant.dart';
+import '../../core/utils/size_utils.dart';
+import '../../routes/app_routes.dart';
+import '../../theme/app_decoration.dart';
+import '../../theme/app_style.dart';
+import '../../widgets/common_image_view.dart';
 import 'controller/homepage_controller.dart';
 
 class HomepageScreen extends GetWidget<HomepageController> {
   @override
   Widget build(BuildContext context) {
-    // ignore: non_constant_identifier_names
-    var ButtonVariant;
     return SafeArea(
         child: Scaffold(
             backgroundColor: ColorConstant.gray50,
@@ -285,25 +290,4 @@ class HomepageScreen extends GetWidget<HomepageController> {
   onTapImgScreenshot2022() {
     Get.toNamed(AppRoutes.tvScreen);
   }
-
-  // ignore: non_constant_identifier_names
-  CustomButton(
-      {required int width,
-      required String text,
-      required EdgeInsetsGeometry margin,
-      required variant,
-      required fontStyle,
-      required Function() onTap,
-      required Alignment alignment}) {}
-
-  // ignore: non_constant_identifier_names
-  CustomAppBar(
-      {required double height,
-      required Container title,
-      required List<Padding> actions}) {}
-}
-
-class ButtonFontStyle {
-  // ignore: non_constant_identifier_names
-  static var InterRegular16;
 }

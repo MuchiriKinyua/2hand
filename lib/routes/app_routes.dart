@@ -32,11 +32,7 @@ class AppRoutes {
 
   static String mpesaScreen = '/mpesa_screen';
 
-  static String dashboardScreen = '/dashboard_screen';
-
   static String homepageScreen = '/homepage_screen';
-
-  static String dashboardOneScreen = '/dashboard_one_screen';
 
   static String radioScreen = '/radio_screen';
 
