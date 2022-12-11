@@ -13,6 +13,7 @@ dependencies:
   flutter_svg: ^0.22.0
   intl: ^0.17.0
   cloud_firestore: ^4.0.3
+  mpesa_flutter_plugin: ^1.6.1
 dev_dependencies: 
   flutter_test: 
     sdk: flutter
