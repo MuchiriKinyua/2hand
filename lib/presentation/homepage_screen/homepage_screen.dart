@@ -180,7 +180,7 @@ class HomepageScreen extends GetWidget<HomepageController> {
                                                                     child: Container(
                                                                         height: getVerticalSize(52.00),
                                                                         width: getHorizontalSize(46.00),
-                                                                        margin: getMargin(left: 5, right: 5),
+                                                                        margin: getMargin(left: 10, right: 5),
                                                                         decoration: AppDecoration.fillBluegray100,
                                                                         child: Stack(children: [
                                                                           Align(
@@ -193,14 +193,14 @@ class HomepageScreen extends GetWidget<HomepageController> {
                                                                             top:
                                                                                 3),
                                                                     child: Text(
-                                                                        "lbl_account"
+                                                                        "lbl_acc"
                                                                             .tr,
                                                                         overflow:
                                                                             TextOverflow
                                                                                 .ellipsis,
                                                                         textAlign:
                                                                             TextAlign
-                                                                                .left,
+                                                                                .right,
                                                                         style: AppStyle
                                                                             .txtInterRegular14))
                                                               ]))
@@ -221,7 +221,7 @@ class HomepageScreen extends GetWidget<HomepageController> {
                                             child: Padding(
                                                 padding: getPadding(
                                                     left: 94,
-                                                    top: 37,
+                                                    top: 17,
                                                     right: 94),
                                                 child: Text(
                                                     "lbl_items_available".tr,
@@ -235,7 +235,7 @@ class HomepageScreen extends GetWidget<HomepageController> {
                                             child: Padding(
                                                 padding: getPadding(
                                                     left: 22,
-                                                    top: 1,
+                                                    top: 10,
                                                     right: 20),
                                                 child: Row(
                                                     mainAxisAlignment:
