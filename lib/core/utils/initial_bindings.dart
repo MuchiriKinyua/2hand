@@ -1,5 +1,5 @@
-import 'package:muchiri_s_application7/core/app_export.dart';
-import 'package:muchiri_s_application7/data/apiClient/api_client.dart';
+import 'package:hand/core/app_export.dart';
+import 'package:hand/data/apiClient/api_client.dart';
 
 class InitialBindings extends Bindings {
   @override

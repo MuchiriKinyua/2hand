@@ -1,6 +1,7 @@
-import 'controller/splash_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:muchiri_s_application7/core/app_export.dart';
+import 'package:hand/core/app_export.dart';
+
+import 'controller/splash_controller.dart';
 
 class SplashScreen extends GetWidget<SplashController> {
   @override

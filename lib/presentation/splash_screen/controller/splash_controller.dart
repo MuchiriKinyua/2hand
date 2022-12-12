@@ -1,5 +1,6 @@
+import 'package:hand/presentation/splash_screen/models/splash_model.dart';
+
 import '/core/app_export.dart';
-import 'package:muchiri_s_application7/presentation/splash_screen/models/splash_model.dart';
 
 class SplashController extends GetxController {
   Rx<SplashModel> splashModelObj = SplashModel().obs;

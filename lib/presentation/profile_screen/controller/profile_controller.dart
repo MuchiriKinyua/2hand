@@ -1,4 +1,4 @@
-import 'package:muchiri_s_application7/presentation/profile_screen/models/profile_model.dart';
+import 'package:hand/presentation/profile_screen/models/profile_model.dart';
 
 import '/core/app_export.dart';
 

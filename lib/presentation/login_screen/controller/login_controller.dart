@@ -1,6 +1,7 @@
-import '/core/app_export.dart';
-import 'package:muchiri_s_application7/presentation/login_screen/models/login_model.dart';
 import 'package:flutter/material.dart';
+import 'package:hand/presentation/login_screen/models/login_model.dart';
+
+import '/core/app_export.dart';
 
 class LoginController extends GetxController {
   TextEditingController groupFourController = TextEditingController();

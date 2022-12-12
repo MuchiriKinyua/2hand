@@ -1,12 +1,12 @@
 import 'package:get/get.dart';
-import 'package:muchiri_s_application7/presentation/login_screen/binding/login_binding.dart';
-import 'package:muchiri_s_application7/presentation/login_screen/login_screen.dart';
-import 'package:muchiri_s_application7/presentation/profile_screen/binding/profile_binding.dart';
-import 'package:muchiri_s_application7/presentation/profile_screen/profile_screen.dart';
-import 'package:muchiri_s_application7/presentation/registration_screen/binding/registration_binding.dart';
-import 'package:muchiri_s_application7/presentation/registration_screen/registration_screen.dart';
-import 'package:muchiri_s_application7/presentation/splash_screen/binding/splash_binding.dart';
-import 'package:muchiri_s_application7/presentation/splash_screen/splash_screen.dart';
+import 'package:hand/presentation/login_screen/binding/login_binding.dart';
+import 'package:hand/presentation/login_screen/login_screen.dart';
+import 'package:hand/presentation/profile_screen/binding/profile_binding.dart';
+import 'package:hand/presentation/profile_screen/profile_screen.dart';
+import 'package:hand/presentation/registration_screen/binding/registration_binding.dart';
+import 'package:hand/presentation/registration_screen/registration_screen.dart';
+import 'package:hand/presentation/splash_screen/binding/splash_binding.dart';
+import 'package:hand/presentation/splash_screen/splash_screen.dart';
 
 import '../presentation/app_navigation_screen/app_navigation_screen.dart';
 import '../presentation/app_navigation_screen/binding/app_navigation_binding.dart';

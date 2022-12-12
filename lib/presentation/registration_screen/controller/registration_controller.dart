@@ -1,6 +1,7 @@
-import '/core/app_export.dart';
-import 'package:muchiri_s_application7/presentation/registration_screen/models/registration_model.dart';
 import 'package:flutter/material.dart';
+import 'package:hand/presentation/registration_screen/models/registration_model.dart';
+
+import '/core/app_export.dart';
 
 class RegistrationController extends GetxController {
   TextEditingController groupNineController = TextEditingController();

@@ -10,7 +10,9 @@ import 'firebase_options.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]).then((value) {
@@ -20,7 +22,7 @@ Future main() async {
 }
 
 class Firebase {
-  static initializeApp() {}
+  static initializeApp({required FirebaseOptions options}) {}
 }
 
 class MyApp extends StatelessWidget {

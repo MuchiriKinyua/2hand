@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:muchiri_s_application7/core/app_export.dart';
-import 'package:muchiri_s_application7/core/utils/validation_functions.dart';
-import 'package:muchiri_s_application7/widgets/custom_text_form_field.dart';
+import 'package:hand/core/app_export.dart';
+import 'package:hand/core/utils/validation_functions.dart';
+import 'package:hand/widgets/custom_text_form_field.dart';
 
 import 'controller/login_controller.dart';
 
