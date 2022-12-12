@@ -10,7 +10,7 @@ import '../../core/utils/image_constant.dart';
 import '../../core/utils/size_utils.dart';
 import '../../theme/app_decoration.dart';
 import '../../widgets/common_image_view.dart';
-import '../../widgets/custom_button.dart';
+import '../../widgets/custom_text_form_field.dart';
 import 'controller/mpesa_controller.dart';
 
 ///  RESULT: {MerchantRequestID: 11219-83067435-1, CheckoutRequestID: ws_CO_13112022101707170713030677, ResponseCode: 0, ResponseDescription: Success. Request accepted for processing, CustomerMessage: Success. Request accepted for processing}
@@ -51,11 +51,13 @@ class MPesaScreen extends GetWidget<MPesaController> {
                                             height: getVerticalSize(135.00),
                                             width: getHorizontalSize(320.00))))
                               ]))),
-                      CustomButton(
-                          width: 305,
-                          text: "lbl_m_pesa_services".tr,
-                          margin: getMargin(left: 23, top: 23, right: 23),
-                          variant: ButtonVariant.FillIndigoA200),
+                      CustomTextFormField(
+                          width: 249,
+                          focusNode: FocusNode(),
+                          controller: controller.groupFifteenController,
+                          hintText: "msg_enter_your_payment".tr,
+                          margin: getMargin(left: 29, top: 68, right: 29),
+                          variant: TextFormFieldVariant.FillTealA200),
                       Form(
                         key: formKey,
                         child: Column(

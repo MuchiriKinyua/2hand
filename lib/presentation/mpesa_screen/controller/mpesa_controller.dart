@@ -11,6 +11,8 @@ class MPesaController extends GetxController {
 
   bool transactionInProgress = false;
 
+  get groupFifteenController => null;
+
   @override
   void onReady() {
     super.onReady();
