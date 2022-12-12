@@ -85,23 +85,6 @@ class MPesaScreen extends GetWidget<MPesaController> {
                                   horizontal: 20, vertical: 20),
                               child: TextFormField(
                                 keyboardType: TextInputType.number,
-                                controller: controller.quantityInputController,
-                                decoration: InputDecoration(
-                                  hintText: "Enter Milk Quantity",
-                                ),
-                                validator: (value) {
-                                  if (value == null || value.isEmpty) {
-                                    return "Please enter a value";
-                                  }
-                                  return null;
-                                },
-                              ),
-                            ),
-                            Container(
-                              margin: EdgeInsets.symmetric(
-                                  horizontal: 20, vertical: 20),
-                              child: TextFormField(
-                                keyboardType: TextInputType.number,
                                 controller: controller.amountInputController,
                                 decoration: InputDecoration(
                                   hintText: "Enter Amount",
@@ -183,7 +166,7 @@ class MPesaScreen extends GetWidget<MPesaController> {
               partyB: "174379",
               callBackURL: Uri.parse(
                   "https://us-central1-mmaziwa-686b2.cloudfunctions.net/mpesaCallback"),
-              accountReference: "mmaziwa",
+              accountReference: "2hand",
               phoneNumber: phone,
               baseUri: Uri(scheme: "https", host: "sandbox.safaricom.co.ke"),
               transactionDesc: "demo  ",
@@ -208,7 +191,6 @@ class MPesaScreen extends GetWidget<MPesaController> {
               .collection("transactions")
               .add(
             {
-              "quantity": controller.quantityInputController.text,
               "amount": amount,
               "phone_no": phone,
               "timestamp": DateTime.now().millisecondsSinceEpoch,

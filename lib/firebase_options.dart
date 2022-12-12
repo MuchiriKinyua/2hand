@@ -63,8 +63,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '22308309062',
     projectId: 'hand-14eb5',
     storageBucket: 'hand-14eb5.appspot.com',
-    iosClientId:
-        '22308309062-sr1qtv58afceisuap6jkcdc9q1p3lql2.apps.googleusercontent.com',
+    iosClientId: '22308309062-sr1qtv58afceisuap6jkcdc9q1p3lql2.apps.googleusercontent.com',
     iosBundleId: 'com.muchirisapplication.app',
   );
 }
