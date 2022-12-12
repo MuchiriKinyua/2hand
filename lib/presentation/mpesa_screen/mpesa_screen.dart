@@ -1,13 +1,19 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-// ignore: unnecessary_import
-import 'package:get/get_state_manager/src/simple/get_view.dart';
+import 'package:get/get.dart';
 import 'package:mpesa_flutter_plugin/initializer.dart';
 import 'package:mpesa_flutter_plugin/payment_enums.dart';
 
-import '../../core/app_export.dart';
+import '../../core/utils/color_constant.dart';
+import '../../core/utils/image_constant.dart';
+import '../../core/utils/size_utils.dart';
+import '../../routes/app_routes.dart';
+import '../../theme/app_decoration.dart';
+import '../../theme/app_style.dart';
+import '../../widgets/common_image_view.dart';
 import '../../widgets/custom_button.dart';
+import 'controller/mpesa_controller.dart';
 
 ///  RESULT: {MerchantRequestID: 11219-83067435-1, CheckoutRequestID: ws_CO_13112022101707170713030677, ResponseCode: 0, ResponseDescription: Success. Request accepted for processing, CustomerMessage: Success. Request accepted for processing}
 

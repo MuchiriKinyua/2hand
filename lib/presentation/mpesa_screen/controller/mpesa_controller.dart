@@ -1,27 +1,16 @@
-import 'package:flutter/material.dart';
-import 'package:get/get_rx/src/rx_types/rx_types.dart';
-import 'package:get/get_state_manager/src/simple/get_controllers.dart';
+import 'package:flutter/cupertino.dart';
 
+import '/core/app_export.dart';
 import '../models/mpesa_model.dart';
 
-class MpesaController extends GetxController {
-  TextEditingController groupFifteenController = TextEditingController();
+class MPesaController extends GetxController {
+  Rx<MpesaModel> mPesaModelObj = MpesaModel().obs;
 
-  TextEditingController groupFourteenController = TextEditingController();
+  final quantityInputController = TextEditingController();
+  final amountInputController = TextEditingController();
+  final phoneInputController = TextEditingController();
 
-  TextEditingController inputController = TextEditingController();
-
-  TextEditingController groupThirteenController = TextEditingController();
-
-  TextEditingController inputOneController = TextEditingController();
-
-  Rx<MpesaModel> mpesaModelObj = MpesaModel().obs;
-
-  get phoneInputController => null;
-
-  get quantityInputController => null;
-
-  get amountInputController => null;
+  bool transactionInProgress = false;
 
   @override
   void onReady() {
@@ -31,10 +20,5 @@ class MpesaController extends GetxController {
   @override
   void onClose() {
     super.onClose();
-    groupFifteenController.dispose();
-    groupFourteenController.dispose();
-    inputController.dispose();
-    groupThirteenController.dispose();
-    inputOneController.dispose();
   }
 }
