@@ -8,9 +8,7 @@ import 'package:mpesa_flutter_plugin/payment_enums.dart';
 import '../../core/utils/color_constant.dart';
 import '../../core/utils/image_constant.dart';
 import '../../core/utils/size_utils.dart';
-import '../../routes/app_routes.dart';
 import '../../theme/app_decoration.dart';
-import '../../theme/app_style.dart';
 import '../../widgets/common_image_view.dart';
 import '../../widgets/custom_button.dart';
 import 'controller/mpesa_controller.dart';
@@ -108,44 +106,7 @@ class MPesaScreen extends GetWidget<MPesaController> {
                           ],
                         ),
                       ),
-                      GestureDetector(
-                          onTap: () {
-                            onTapButton();
-                          },
-                          child: Container(
-                              height: getVerticalSize(33.00),
-                              width: getHorizontalSize(253.00),
-                              margin: getMargin(
-                                  left: 23, top: 40, right: 23, bottom: 20),
-                              child: Stack(
-                                  alignment: Alignment.topCenter,
-                                  children: [
-                                    Align(
-                                        alignment: Alignment.bottomLeft,
-                                        child: Container(
-                                            height: getVerticalSize(31.00),
-                                            width: getHorizontalSize(253.00),
-                                            decoration: BoxDecoration(
-                                                color: ColorConstant.red300))),
-                                    Align(
-                                        alignment: Alignment.topCenter,
-                                        child: Padding(
-                                            padding: getPadding(
-                                              left: 19,
-                                              right: 19,
-                                            ),
-                                            child: Text(
-                                                "msg_back_to_homepag".tr,
-                                                overflow: TextOverflow.ellipsis,
-                                                textAlign: TextAlign.left,
-                                                style: AppStyle
-                                                    .txtInterRegular20Black900)))
-                                  ])))
                     ])))));
-  }
-
-  onTapButton() {
-    Get.toNamed(AppRoutes.homepageScreen);
   }
 
   Future<dynamic> startTransaction(BuildContext context,
