@@ -13,8 +13,6 @@ class ImageConstant {
 
   static String imageNotFound = 'assets/images/image_not_found.png';
 
-  static var imgScreenshot2022118x123;
-
   static var imgButton;
 
   static var imgScreenshot2022 = 'assets/images/img_screenshot2022.png';

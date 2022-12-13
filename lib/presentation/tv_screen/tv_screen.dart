@@ -40,7 +40,7 @@ class TvScreen extends GetWidget<TvController> {
                       Padding(
                           padding: getPadding(left: 88, top: 6, right: 88),
                           child: CommonImageView(
-                              imagePath: ImageConstant.imgScreenshot2022118x123,
+                              imagePath: ImageConstant.imgScreenshot2022,
                               height: getVerticalSize(118.00),
                               width: getHorizontalSize(123.00))),
                       Container(
