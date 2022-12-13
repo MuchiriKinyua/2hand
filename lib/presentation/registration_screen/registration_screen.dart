@@ -79,7 +79,7 @@ class RegistrationScreen extends GetWidget<RegistrationController> {
                       width: 219,
                       focusNode: FocusNode(),
                       controller: controller.nameInputController,
-                      hintText: "lbl_your_name".tr,
+                      hintText: "lbl_name".tr,
                       margin: getMargin(left: 20, top: 7, right: 20),
                       alignment: Alignment.centerLeft,
                       validator: (value) {
@@ -100,7 +100,7 @@ class RegistrationScreen extends GetWidget<RegistrationController> {
                       width: 219,
                       focusNode: FocusNode(),
                       controller: controller.emailInputController,
-                      hintText: "lbl_your_email".tr,
+                      hintText: "lbl_email".tr,
                       margin: getMargin(left: 20, top: 6, right: 20),
                       alignment: Alignment.centerLeft,
                       validator: (value) {

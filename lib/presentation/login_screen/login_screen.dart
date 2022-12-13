@@ -110,7 +110,7 @@ class LogInScreen extends GetWidget<LogInController> {
                                   width: 219,
                                   focusNode: FocusNode(),
                                   controller: controller.emailInputController,
-                                  hintText: "lbl_your_email".tr,
+                                  hintText: "lbl_email".tr,
                                   margin:
                                       getMargin(left: 24, top: 4, right: 24),
                                   alignment: Alignment.centerLeft,
