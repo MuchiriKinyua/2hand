@@ -80,21 +80,6 @@ class LogInScreen extends GetWidget<LogInController> {
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w400)),
-                                                          TextSpan(
-                                                              text:
-                                                                  "lbl_mmaziwa_app2"
-                                                                      .tr,
-                                                              style: TextStyle(
-                                                                  color: ColorConstant
-                                                                      .black900,
-                                                                  fontSize:
-                                                                      getFontSize(
-                                                                          24),
-                                                                  fontFamily:
-                                                                      'Inter',
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w400))
                                                         ]),
                                                         textAlign:
                                                             TextAlign.left))),
@@ -193,8 +178,7 @@ class LogInScreen extends GetWidget<LogInController> {
                                                         left: 2,
                                                         top: 5,
                                                         right: 10),
-                                                    child: Text(
-                                                        "msg_did_you_forget".tr,
+                                                    child: Text("msg_acc".tr,
                                                         overflow: TextOverflow
                                                             .ellipsis,
                                                         textAlign:
