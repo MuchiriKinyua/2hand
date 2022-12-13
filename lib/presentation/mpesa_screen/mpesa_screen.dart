@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,7 +16,7 @@ import 'controller/mpesa_controller.dart';
 
 ///  RESULT: {MerchantRequestID: 11219-83067435-1, CheckoutRequestID: ws_CO_13112022101707170713030677, ResponseCode: 0, ResponseDescription: Success. Request accepted for processing, CustomerMessage: Success. Request accepted for processing}
 
-class MPesaScreen extends GetWidget<MPesaController> {
+class MpesaScreen extends GetWidget<MpesaController> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -145,7 +146,6 @@ class MPesaScreen extends GetWidget<MPesaController> {
           // show toast message
         }
         // ignore: non_constant_identifier_names
-        var FirebaseAuth;
         final currentUser = FirebaseAuth.instance.currentUser;
         if (currentUser != null) {
           FirebaseFirestore.instance

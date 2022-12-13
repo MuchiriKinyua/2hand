@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import '/core/app_export.dart';
 import '../models/mpesa_model.dart';
 
-class MPesaController extends GetxController {
+class MpesaController extends GetxController {
   Rx<MpesaModel> mPesaModelObj = MpesaModel().obs;
 
   final amountInputController = TextEditingController();

@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:hand/presentation/login_screen/binding/login_binding.dart';
 import 'package:hand/presentation/login_screen/login_screen.dart';
+import 'package:hand/presentation/mpesa_screen/binding/mpesa_binding.dart';
 import 'package:hand/presentation/profile_screen/binding/profile_binding.dart';
 import 'package:hand/presentation/profile_screen/profile_screen.dart';
 import 'package:hand/presentation/registration_screen/binding/registration_binding.dart';
@@ -12,6 +13,7 @@ import '../presentation/app_navigation_screen/app_navigation_screen.dart';
 import '../presentation/app_navigation_screen/binding/app_navigation_binding.dart';
 import '../presentation/homepage_screen/binding/homepage_binding.dart';
 import '../presentation/homepage_screen/homepage_screen.dart';
+import '../presentation/mpesa_screen/mpesa_screen.dart';
 import '../presentation/post_items_screen/binding/post_items_binding.dart';
 import '../presentation/post_items_screen/post_items_screen.dart';
 import '../presentation/radio_screen/binding/radio_binding.dart';
@@ -111,6 +113,20 @@ class AppRoutes {
       page: () => SplashScreen(),
       bindings: [
         SplashBinding(),
+      ],
+    ),
+    GetPage(
+      name: initialRoute,
+      page: () => SplashScreen(),
+      bindings: [
+        SplashBinding(),
+      ],
+    ),
+    GetPage(
+      name: mpesaScreen,
+      page: () => MpesaScreen(),
+      bindings: [
+        MpesaBinding(),
       ],
     )
   ];
