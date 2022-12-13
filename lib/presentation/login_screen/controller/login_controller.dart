@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:hand/presentation/login_screen/models/login_model.dart';
 
 import '/core/app_export.dart';
+import '../models/login_model.dart';
 
-class LoginController extends GetxController {
-  TextEditingController groupFourController = TextEditingController();
+class LogInController extends GetxController {
+  TextEditingController emailInputController = TextEditingController();
 
-  TextEditingController inputController = TextEditingController();
+  TextEditingController passwordInputController = TextEditingController();
 
-  TextEditingController groupThreeController = TextEditingController();
-
-  TextEditingController inputOneController = TextEditingController();
-
-  Rx<LoginModel> loginModelObj = LoginModel().obs;
+  Rx<LoginModel> logInModelObj = LoginModel().obs;
 
   @override
   void onReady() {
@@ -22,9 +18,7 @@ class LoginController extends GetxController {
   @override
   void onClose() {
     super.onClose();
-    groupFourController.dispose();
-    inputController.dispose();
-    groupThreeController.dispose();
-    inputOneController.dispose();
+    emailInputController.dispose();
+    passwordInputController.dispose();
   }
 }

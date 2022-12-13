@@ -138,4 +138,6 @@ class AppStyle {
     ),
     fontWeight: FontWeight.w400,
   );
+
+  static var txtInterSemiBold16;
 }

@@ -18,6 +18,7 @@ final Map<String, String> enUs = {
   "lbl_registration": "registration ",
   "lbl_search_here": "Search here...",
   "lbl_log_out": "Log out",
+  "msg_acc": "You don't have an account?",
   "msg_do_you_have_an": "Do you have an account?",
   "msg_do_you_have_an2": "Do you have an account?",
   "msg_2hand_dealers_w":

@@ -1,1 +1,3 @@
-class RegistrationModel {}
+class RegistrationModel {
+  late String type;
+}

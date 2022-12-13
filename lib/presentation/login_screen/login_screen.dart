@@ -1,19 +1,29 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:hand/core/app_export.dart';
-import 'package:hand/core/utils/validation_functions.dart';
-import 'package:hand/widgets/custom_text_form_field.dart';
+import 'package:get/get.dart';
 
+import '../../core/utils/color_constant.dart';
+import '../../core/utils/image_constant.dart';
+import '../../core/utils/size_utils.dart';
+import '../../core/utils/validation_functions.dart';
+import '../../routes/app_routes.dart';
+import '../../theme/app_decoration.dart';
+import '../../theme/app_style.dart';
+import '../../widgets/common_image_view.dart';
+import '../../widgets/custom_button.dart';
+import '../../widgets/custom_text_form_field.dart';
 import 'controller/login_controller.dart';
 
 // ignore_for_file: must_be_immutable
-class LoginScreen extends GetWidget<LoginController> {
+class LogInScreen extends GetWidget<LogInController> {
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: ColorConstant.gray50,
+            backgroundColor: ColorConstant.whiteA700,
             body: Container(
                 width: size.width,
                 child: SingleChildScrollView(
@@ -22,29 +32,102 @@ class LoginScreen extends GetWidget<LoginController> {
                         autovalidateMode: AutovalidateMode.onUserInteraction,
                         child: Column(
                             mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Align(
                                   alignment: Alignment.centerLeft,
+                                  child: Container(
+                                      width: double.infinity,
+                                      decoration: AppDecoration.fillCyan200,
+                                      child: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.end,
+                                          children: [
+                                            Padding(
+                                                padding: getPadding(
+                                                    left: 20,
+                                                    top: 7,
+                                                    right: 20),
+                                                child: CommonImageView(
+                                                    imagePath: ImageConstant
+                                                        .img15949900635591,
+                                                    height:
+                                                        getVerticalSize(135.00),
+                                                    width: getHorizontalSize(
+                                                        320.00))),
+                                            Align(
+                                                alignment: Alignment.centerLeft,
+                                                child: Container(
+                                                    margin: getMargin(
+                                                        left: 67,
+                                                        top: 25,
+                                                        right: 67),
+                                                    child: RichText(
+                                                        text:
+                                                            TextSpan(children: [
+                                                          TextSpan(
+                                                              text: "          "
+                                                                  .tr,
+                                                              style: TextStyle(
+                                                                  color: ColorConstant
+                                                                      .black900,
+                                                                  fontSize:
+                                                                      getFontSize(
+                                                                          24),
+                                                                  fontFamily:
+                                                                      'Inter',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400)),
+                                                          TextSpan(
+                                                              text:
+                                                                  "lbl_mmaziwa_app2"
+                                                                      .tr,
+                                                              style: TextStyle(
+                                                                  color: ColorConstant
+                                                                      .black900,
+                                                                  fontSize:
+                                                                      getFontSize(
+                                                                          24),
+                                                                  fontFamily:
+                                                                      'Inter',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400))
+                                                        ]),
+                                                        textAlign:
+                                                            TextAlign.left))),
+                                            Padding(
+                                                padding: getPadding(
+                                                    left: 27,
+                                                    top: 17,
+                                                    right: 27,
+                                                    bottom: 14),
+                                                child: Text(
+                                                    "msg_enter_your_deta".tr,
+                                                    overflow:
+                                                        TextOverflow.ellipsis,
+                                                    textAlign: TextAlign.left,
+                                                    style: AppStyle
+                                                        .txtInterSemiBold16))
+                                          ]))),
+                              Align(
+                                  alignment: Alignment.centerLeft,
                                   child: Padding(
                                       padding: getPadding(
-                                          left: 53, top: 60, right: 53),
-                                      child: CommonImageView(
-                                          svgPath:
-                                              ImageConstant.imgUndrawgonesho,
-                                          height: getVerticalSize(197.00),
-                                          width: getHorizontalSize(215.00)))),
+                                          left: 24, top: 7, right: 24),
+                                      child: Text("msg_enter_your_emai".tr,
+                                          overflow: TextOverflow.ellipsis,
+                                          textAlign: TextAlign.left,
+                                          style: AppStyle.txtInterSemiBold16))),
                               CustomTextFormField(
-                                  width: 249,
+                                  width: 219,
                                   focusNode: FocusNode(),
-                                  controller: controller.groupFourController,
-                                  hintText: "msg_enter_your_emai".tr,
+                                  controller: controller.emailInputController,
+                                  hintText: "lbl_your_email".tr,
                                   margin:
-                                      getMargin(left: 34, top: 37, right: 34),
-                                  variant: TextFormFieldVariant.FillRed400,
-                                  fontStyle:
-                                      TextFormFieldFontStyle.InterRegular16,
+                                      getMargin(left: 24, top: 4, right: 24),
                                   alignment: Alignment.centerLeft,
                                   validator: (value) {
                                     if (value == null ||
@@ -54,50 +137,23 @@ class LoginScreen extends GetWidget<LoginController> {
                                     }
                                     return null;
                                   }),
+                              Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Padding(
+                                      padding: getPadding(
+                                          left: 27, top: 6, right: 27),
+                                      child: Text("msg_enter_your_pass".tr,
+                                          overflow: TextOverflow.ellipsis,
+                                          textAlign: TextAlign.left,
+                                          style: AppStyle.txtInterSemiBold16))),
                               CustomTextFormField(
                                   width: 219,
                                   focusNode: FocusNode(),
-                                  controller: controller.inputController,
-                                  hintText: "lbl_email".tr,
-                                  margin:
-                                      getMargin(left: 34, top: 3, right: 34),
-                                  alignment: Alignment.centerLeft,
-                                  validator: (value) {
-                                    if (value == null ||
-                                        (!isValidEmail(value,
-                                            isRequired: true))) {
-                                      return "Please enter valid email";
-                                    }
-                                    return null;
-                                  }),
-                              CustomTextFormField(
-                                  width: 249,
-                                  focusNode: FocusNode(),
-                                  controller: controller.groupThreeController,
-                                  hintText: "msg_enter_your_pass".tr,
-                                  margin:
-                                      getMargin(left: 36, top: 4, right: 36),
-                                  variant: TextFormFieldVariant.FillPink800,
-                                  padding: TextFormFieldPadding.PaddingAll1,
-                                  fontStyle:
-                                      TextFormFieldFontStyle.InterRegular16,
-                                  alignment: Alignment.centerLeft,
-                                  validator: (value) {
-                                    if (value == null ||
-                                        (!isValidPassword(value,
-                                            isRequired: true))) {
-                                      return "Please enter valid password";
-                                    }
-                                    return null;
-                                  },
-                                  isObscureText: true),
-                              CustomTextFormField(
-                                  width: 219,
-                                  focusNode: FocusNode(),
-                                  controller: controller.inputOneController,
+                                  controller:
+                                      controller.passwordInputController,
                                   hintText: "lbl_password".tr,
                                   margin:
-                                      getMargin(left: 33, top: 8, right: 33),
+                                      getMargin(left: 24, top: 10, right: 24),
                                   textInputAction: TextInputAction.done,
                                   alignment: Alignment.centerLeft,
                                   validator: (value) {
@@ -111,77 +167,86 @@ class LoginScreen extends GetWidget<LoginController> {
                                   isObscureText: true),
                               Align(
                                   alignment: Alignment.centerLeft,
-                                  child: GestureDetector(
-                                      onTap: () {
-                                        onTapTxtLogin();
-                                      },
-                                      child: Container(
-                                          margin: getMargin(
-                                              left: 56, top: 5, right: 56),
-                                          padding: getPadding(
-                                              left: 30,
-                                              top: 7,
-                                              right: 49,
-                                              bottom: 7),
-                                          decoration:
-                                              AppDecoration.txtFillTeal400,
-                                          child: Text("lbl_log_in".tr,
-                                              overflow: TextOverflow.ellipsis,
-                                              textAlign: TextAlign.left,
-                                              style: AppStyle
-                                                  .txtInterRegular20WhiteA700)))),
-                              Align(
-                                  alignment: Alignment.centerRight,
-                                  child: Padding(
-                                      padding: getPadding(
-                                          left: 57,
-                                          top: 7,
-                                          right: 57,
-                                          bottom: 94),
-                                      child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.end,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          mainAxisSize: MainAxisSize.max,
+                                  child: Container(
+                                      width: getHorizontalSize(250.00),
+                                      margin: getMargin(
+                                          left: 28, top: 6, right: 28),
+                                      child: Stack(
+                                          alignment: Alignment.bottomLeft,
                                           children: [
-                                            Padding(
-                                                padding: getPadding(bottom: 6),
-                                                child: Text(
-                                                    "msg_do_you_have_an".tr,
-                                                    overflow:
-                                                        TextOverflow.ellipsis,
-                                                    textAlign: TextAlign.left,
-                                                    style: AppStyle
-                                                        .txtInterRegular14)),
-                                            GestureDetector(
-                                                onTap: () {
-                                                  onTapTxtSignup();
-                                                },
+                                            Align(
+                                                alignment: Alignment.topLeft,
                                                 child: Container(
-                                                    margin: getMargin(
-                                                        left: 2, top: 1),
+                                                    height:
+                                                        getVerticalSize(21.00),
+                                                    width: getHorizontalSize(
+                                                        250.00),
+                                                    margin:
+                                                        getMargin(bottom: 10),
+                                                    decoration: BoxDecoration(
+                                                        color: ColorConstant
+                                                            .gray100))),
+                                            Align(
+                                                alignment: Alignment.bottomLeft,
+                                                child: Padding(
                                                     padding: getPadding(
-                                                        left: 5, right: 5),
-                                                    decoration: AppDecoration
-                                                        .txtFillBluegray500,
+                                                        left: 2,
+                                                        top: 5,
+                                                        right: 10),
                                                     child: Text(
-                                                        "lbl_sign_up".tr,
+                                                        "msg_did_you_forget".tr,
                                                         overflow: TextOverflow
                                                             .ellipsis,
                                                         textAlign:
                                                             TextAlign.left,
                                                         style: AppStyle
-                                                            .txtInterRegular14)))
-                                          ])))
+                                                            .txtInterRegular16)))
+                                          ]))),
+                              TextButton(
+                                  onPressed: () {
+                                    Get.toNamed(AppRoutes.registrationScreen);
+                                  },
+                                  child: Text("Sign Up")),
+                              CustomButton(
+                                  width: 230,
+                                  text: "Log in",
+                                  margin: getMargin(
+                                      left: 39, top: 10, right: 39, bottom: 20),
+                                  variant: ButtonVariant.FillGray500,
+                                  onTap: onTapBtnLogin,
+                                  alignment: Alignment.centerLeft),
                             ]))))));
   }
 
-  onTapTxtLogin() {
-    Get.toNamed(AppRoutes.profileScreen);
-  }
-
-  onTapTxtSignup() {
-    Get.toNamed(AppRoutes.registrationScreen);
+  onTapBtnLogin() async {
+    try {
+      await FirebaseAuth.instance
+          .signInWithEmailAndPassword(
+        email: controller.emailInputController.text,
+        password: controller.passwordInputController.text,
+      )
+          .then((userCredential) {
+        if (userCredential.user != null) {
+          FirebaseFirestore.instance
+              .collection("users")
+              .doc(userCredential.user!.uid)
+              .get()
+              .then((value) {
+            if (value.exists) {
+              final data = value.data() ?? {};
+              Get.offAndToNamed(data["type"] == "farmer"
+                  ? AppRoutes.homepageScreen
+                  : AppRoutes.profileScreen);
+            }
+          });
+        }
+      });
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+        print('No user found for that email.');
+      } else if (e.code == 'wrong-password') {
+        print('Wrong password provided for that user.');
+      }
+    }
   }
 }

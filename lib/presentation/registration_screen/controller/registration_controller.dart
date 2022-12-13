@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:hand/presentation/registration_screen/models/registration_model.dart';
 
 import '/core/app_export.dart';
+import '../models/registration_model.dart';
 
 class RegistrationController extends GetxController {
-  TextEditingController groupNineController = TextEditingController();
+  TextEditingController nameInputController = TextEditingController();
 
-  TextEditingController groupEightController = TextEditingController();
+  TextEditingController emailInputController = TextEditingController();
 
-  TextEditingController inputController = TextEditingController();
+  TextEditingController passwordInputController = TextEditingController();
 
-  TextEditingController groupSevenController = TextEditingController();
-
-  TextEditingController inputOneController = TextEditingController();
-
-  TextEditingController groupSixController = TextEditingController();
-
-  TextEditingController inputTwoController = TextEditingController();
-
-  TextEditingController inputThreeController = TextEditingController();
+  TextEditingController confirmpasswordInputController =
+      TextEditingController();
 
   Rx<RegistrationModel> registrationModelObj = RegistrationModel().obs;
+
+  void setAccountType(String? type) {
+    registrationModelObj
+      ..update((val) {
+        val?.type = type ?? "farmer";
+      });
+    update();
+  }
 
   @override
   void onReady() {
@@ -30,13 +31,9 @@ class RegistrationController extends GetxController {
   @override
   void onClose() {
     super.onClose();
-    groupNineController.dispose();
-    groupEightController.dispose();
-    inputController.dispose();
-    groupSevenController.dispose();
-    inputOneController.dispose();
-    groupSixController.dispose();
-    inputTwoController.dispose();
-    inputThreeController.dispose();
+    nameInputController.dispose();
+    emailInputController.dispose();
+    passwordInputController.dispose();
+    confirmpasswordInputController.dispose();
   }
 }

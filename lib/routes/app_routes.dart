@@ -60,13 +60,6 @@ class AppRoutes {
       ],
     ),
     GetPage(
-      name: loginScreen,
-      page: () => LoginScreen(),
-      bindings: [
-        LoginBinding(),
-      ],
-    ),
-    GetPage(
       name: profileScreen,
       page: () => ProfileScreen(),
       bindings: [
@@ -110,9 +103,9 @@ class AppRoutes {
     ),
     GetPage(
       name: initialRoute,
-      page: () => SplashScreen(),
+      page: () => LogInScreen(),
       bindings: [
-        SplashBinding(),
+        LogInBinding(),
       ],
     ),
     GetPage(

@@ -1,8 +1,20 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:hand/core/app_export.dart';
-import 'package:hand/core/utils/validation_functions.dart';
-import 'package:hand/widgets/custom_text_form_field.dart';
+import 'package:get/get.dart';
+// ignore: unnecessary_import
+import 'package:get/get_core/src/get_main.dart';
 
+import '../../core/utils/color_constant.dart';
+import '../../core/utils/image_constant.dart';
+import '../../core/utils/size_utils.dart';
+import '../../core/utils/validation_functions.dart';
+import '../../routes/app_routes.dart';
+import '../../theme/app_decoration.dart';
+import '../../theme/app_style.dart';
+import '../../widgets/common_image_view.dart';
+import '../../widgets/custom_button.dart';
+import '../../widgets/custom_text_form_field.dart';
 import 'controller/registration_controller.dart';
 
 // ignore_for_file: must_be_immutable
@@ -12,203 +24,188 @@ class RegistrationScreen extends GetWidget<RegistrationController> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
-            backgroundColor: ColorConstant.gray50,
-            body: Container(
-                width: size.width,
-                child: SingleChildScrollView(
-                    child: Form(
-                        key: _formKey,
-                        autovalidateMode: AutovalidateMode.onUserInteraction,
-                        child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              CustomTextFormField(
-                                  width: 249,
-                                  focusNode: FocusNode(),
-                                  controller: controller.groupNineController,
-                                  hintText: "msg_enter_your_deta".tr,
-                                  margin:
-                                      getMargin(left: 29, top: 42, right: 29),
-                                  variant: TextFormFieldVariant.FillTealA200,
-                                  fontStyle:
-                                      TextFormFieldFontStyle.InterRegular16),
-                              CustomTextFormField(
-                                  width: 249,
-                                  focusNode: FocusNode(),
-                                  controller: controller.groupEightController,
-                                  hintText: "msg_enter_your_name".tr,
-                                  margin:
-                                      getMargin(left: 25, top: 41, right: 25),
-                                  variant: TextFormFieldVariant.FillRed300,
-                                  padding: TextFormFieldPadding.PaddingAll1,
-                                  fontStyle:
-                                      TextFormFieldFontStyle.InterRegular16,
-                                  validator: (value) {
-                                    if (!isText(value)) {
-                                      return "Please enter valid text";
-                                    }
-                                    return null;
-                                  }),
-                              CustomTextFormField(
-                                  width: 219,
-                                  focusNode: FocusNode(),
-                                  controller: controller.inputController,
-                                  hintText: "lbl_name".tr,
-                                  margin:
-                                      getMargin(left: 26, top: 9, right: 26),
-                                  validator: (value) {
-                                    if (!isText(value)) {
-                                      return "Please enter valid text";
-                                    }
-                                    return null;
-                                  }),
-                              CustomTextFormField(
-                                  width: 249,
-                                  focusNode: FocusNode(),
-                                  controller: controller.groupSevenController,
-                                  hintText: "msg_enter_your_emai".tr,
-                                  margin:
-                                      getMargin(left: 25, top: 4, right: 25),
-                                  variant: TextFormFieldVariant.FillRed400,
-                                  fontStyle:
-                                      TextFormFieldFontStyle.InterRegular16,
-                                  validator: (value) {
-                                    if (value == null ||
-                                        (!isValidEmail(value,
-                                            isRequired: true))) {
-                                      return "Please enter valid email";
-                                    }
-                                    return null;
-                                  }),
-                              CustomTextFormField(
-                                  width: 219,
-                                  focusNode: FocusNode(),
-                                  controller: controller.inputOneController,
-                                  hintText: "lbl_email".tr,
-                                  margin:
-                                      getMargin(left: 25, top: 10, right: 25),
-                                  validator: (value) {
-                                    if (value == null ||
-                                        (!isValidEmail(value,
-                                            isRequired: true))) {
-                                      return "Please enter valid email";
-                                    }
-                                    return null;
-                                  }),
-                              CustomTextFormField(
-                                  width: 249,
-                                  focusNode: FocusNode(),
-                                  controller: controller.groupSixController,
-                                  hintText: "msg_enter_your_pass".tr,
-                                  margin:
-                                      getMargin(left: 24, top: 11, right: 24),
-                                  variant: TextFormFieldVariant.FillPink800,
-                                  padding: TextFormFieldPadding.PaddingAll1,
-                                  fontStyle:
-                                      TextFormFieldFontStyle.InterRegular16,
-                                  validator: (value) {
-                                    if (value == null ||
-                                        (!isValidPassword(value,
-                                            isRequired: true))) {
-                                      return "Please enter valid password";
-                                    }
-                                    return null;
-                                  },
-                                  isObscureText: true),
-                              CustomTextFormField(
-                                  width: 219,
-                                  focusNode: FocusNode(),
-                                  controller: controller.inputTwoController,
-                                  hintText: "lbl_password".tr,
-                                  margin:
-                                      getMargin(left: 24, top: 8, right: 24),
-                                  validator: (value) {
-                                    if (value == null ||
-                                        (!isValidPassword(value,
-                                            isRequired: true))) {
-                                      return "Please enter valid password";
-                                    }
-                                    return null;
-                                  },
-                                  isObscureText: true),
-                              Container(
-                                  margin:
-                                      getMargin(left: 25, top: 16, right: 25),
-                                  padding: getPadding(left: 8, right: 8),
-                                  decoration: AppDecoration.txtFillPink700,
-                                  child: Text("msg_confirm_your_pa".tr,
-                                      overflow: TextOverflow.ellipsis,
-                                      textAlign: TextAlign.left,
-                                      style: AppStyle.txtInterRegular16)),
-                              CustomTextFormField(
-                                  width: 219,
-                                  focusNode: FocusNode(),
-                                  controller: controller.inputThreeController,
-                                  hintText: "lbl_password".tr,
-                                  margin:
-                                      getMargin(left: 24, top: 3, right: 24),
-                                  textInputAction: TextInputAction.done,
-                                  validator: (value) {
-                                    if (value == null ||
-                                        (!isValidPassword(value,
-                                            isRequired: true))) {
-                                      return "Please enter valid password";
-                                    }
-                                    return null;
-                                  },
-                                  isObscureText: true),
-                              Padding(
-                                  padding: getPadding(bottom: 6),
-                                  child: Text("Do you have an account?",
-                                      overflow: TextOverflow.ellipsis,
-                                      textAlign: TextAlign.left,
-                                      style: AppStyle.txtInterRegular14)),
-                              GestureDetector(
-                                  onTap: () {
-                                    onTapTxtSignin();
-                                  },
-                                  child: Container(
-                                      margin: getMargin(left: 2, top: 1),
-                                      padding: getPadding(left: 5, right: 5),
-                                      decoration:
-                                          AppDecoration.txtFillBluegray500,
-                                      child: Text("lbl_sign_in".tr,
-                                          overflow: TextOverflow.ellipsis,
-                                          textAlign: TextAlign.left,
-                                          style: AppStyle.txtInterRegular14))),
-                              GestureDetector(
-                                  onTap: () {
-                                    onTapTxtRegister();
-                                  },
-                                  child: Container(
-                                      margin: getMargin(
-                                          left: 83,
-                                          top: 34,
-                                          right: 83,
-                                          bottom: 5),
-                                      padding: getPadding(
-                                          left: 30,
-                                          top: 2,
-                                          right: 30,
-                                          bottom: 2),
-                                      decoration: AppDecoration.txtFillTeal401,
-                                      child: Text("lbl_register".tr,
-                                          overflow: TextOverflow.ellipsis,
-                                          textAlign: TextAlign.left,
-                                          style: AppStyle.txtInterRegular24)))
-                            ]))))));
+      child: Scaffold(
+        backgroundColor: ColorConstant.whiteA700,
+        body: Container(
+          width: size.width,
+          child: SingleChildScrollView(
+            child: Form(
+              key: _formKey,
+              autovalidateMode: AutovalidateMode.onUserInteraction,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Container(
+                          width: double.infinity,
+                          decoration: AppDecoration.fillCyan200,
+                          child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Padding(
+                                    padding:
+                                        getPadding(left: 20, top: 7, right: 20),
+                                    child: CommonImageView(
+                                        imagePath:
+                                            ImageConstant.img15949900635591,
+                                        height: getVerticalSize(135.00),
+                                        width: getHorizontalSize(320.00))),
+                                Container(
+                                    margin: getMargin(top: 5, right: 60),
+                                    child: RichText(
+                                        text: TextSpan(children: [
+                                          TextSpan(
+                                              text: "          ".tr,
+                                              style: TextStyle(
+                                                  color: ColorConstant.black900,
+                                                  fontSize: getFontSize(24),
+                                                  fontFamily: 'Inter',
+                                                  fontWeight: FontWeight.w400)),
+                                        ]),
+                                        textAlign: TextAlign.left)),
+                              ]))),
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Padding(
+                          padding: getPadding(left: 19, top: 7, right: 19),
+                          child: Text("msg_enter_your_name".tr,
+                              overflow: TextOverflow.ellipsis,
+                              textAlign: TextAlign.left,
+                              style: AppStyle.txtInterSemiBold16))),
+                  CustomTextFormField(
+                      width: 219,
+                      focusNode: FocusNode(),
+                      controller: controller.nameInputController,
+                      hintText: "lbl_your_name".tr,
+                      margin: getMargin(left: 20, top: 7, right: 20),
+                      alignment: Alignment.centerLeft,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return "Please enter valid text";
+                        }
+                        return null;
+                      }),
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Padding(
+                          padding: getPadding(left: 20, top: 7, right: 20),
+                          child: Text("msg_enter_your_emai".tr,
+                              overflow: TextOverflow.ellipsis,
+                              textAlign: TextAlign.left,
+                              style: AppStyle.txtInterSemiBold16))),
+                  CustomTextFormField(
+                      width: 219,
+                      focusNode: FocusNode(),
+                      controller: controller.emailInputController,
+                      hintText: "lbl_your_email".tr,
+                      margin: getMargin(left: 20, top: 6, right: 20),
+                      alignment: Alignment.centerLeft,
+                      validator: (value) {
+                        if (value == null ||
+                            (!isValidEmail(value, isRequired: true))) {
+                          return "Please enter valid email";
+                        }
+                        return null;
+                      }),
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Padding(
+                          padding: getPadding(left: 20, top: 3, right: 20),
+                          child: Text("msg_enter_your_pass".tr,
+                              overflow: TextOverflow.ellipsis,
+                              textAlign: TextAlign.left,
+                              style: AppStyle.txtInterSemiBold16))),
+                  CustomTextFormField(
+                      width: 219,
+                      focusNode: FocusNode(),
+                      controller: controller.passwordInputController,
+                      hintText: "lbl_password".tr,
+                      margin: getMargin(left: 20, top: 3, right: 20),
+                      alignment: Alignment.centerLeft,
+                      validator: (value) {
+                        if (value == null ||
+                            (!isValidPassword(value, isRequired: true))) {
+                          return "Please enter valid password";
+                        }
+                        return null;
+                      },
+                      isObscureText: true),
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Padding(
+                          padding: getPadding(left: 19, top: 4, right: 19),
+                          child: Text("msg_enter_your_pass".tr,
+                              overflow: TextOverflow.ellipsis,
+                              textAlign: TextAlign.left,
+                              style: AppStyle.txtInterSemiBold16))),
+                  CustomTextFormField(
+                      width: 219,
+                      focusNode: FocusNode(),
+                      controller: controller.confirmpasswordInputController,
+                      hintText: "lbl_password".tr,
+                      margin: getMargin(left: 19, right: 19),
+                      textInputAction: TextInputAction.done,
+                      alignment: Alignment.centerLeft,
+                      validator: (value) {
+                        if (value == null ||
+                            (!isValidPassword(value, isRequired: true))) {
+                          return "Please enter valid password";
+                        }
+                        return null;
+                      },
+                      isObscureText: true),
+                  CustomButton(
+                    width: 164,
+                    text: "lbl_register".tr,
+                    margin: getMargin(left: 30, top: 18, right: 30),
+                    variant: ButtonVariant.FillIndigoA200,
+                    onTap: onTapBtnRegister,
+                    alignment: Alignment.centerLeft,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      children: [
+                        Text("Already have an account?"),
+                        TextButton(
+                            onPressed: () {
+                              Get.toNamed(AppRoutes.loginScreen);
+                            },
+                            child: Text("Login"))
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
-  onTapTxtRegister() {
-    Get.toNamed(AppRoutes.loginScreen);
-  }
-
-  // ignore: non_constant_identifier_names
-
-  void onTapTxtSignin() {
-    Get.toNamed(AppRoutes.loginScreen);
+  onTapBtnRegister() async {
+    final userCredential =
+        await FirebaseAuth.instance.createUserWithEmailAndPassword(
+      email: controller.emailInputController.text,
+      password: controller.passwordInputController.text,
+    );
+    final user = userCredential.user;
+    final userData = {
+      "name": controller.nameInputController.text,
+      "type": controller.registrationModelObj.value.type,
+    };
+    if (user != null) {
+      await FirebaseFirestore.instance
+          .collection("users")
+          .doc(user.uid)
+          .set(userData);
+    }
+    Get.toNamed(userData["type"] == "buyer"
+        ? AppRoutes.homepageScreen
+        : AppRoutes.profileScreen);
   }
 }
