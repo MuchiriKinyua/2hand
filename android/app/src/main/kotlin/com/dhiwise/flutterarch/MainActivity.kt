@@ -1,4 +1,4 @@
-package com.muchirisapplication.app
+package com.hand.app
 
 import io.flutter.embedding.android.FlutterActivity
 

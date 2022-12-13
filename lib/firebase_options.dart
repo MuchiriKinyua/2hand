@@ -50,20 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBxdoEJPNyrNOGhxZHFq_9v-2hje6wD198',
-    appId: '1:22308309062:android:3e744d2f769e05b9452247',
-    messagingSenderId: '22308309062',
-    projectId: 'hand-14eb5',
-    storageBucket: 'hand-14eb5.appspot.com',
+    apiKey: 'AIzaSyAQ7G2BbUhAjeNaORWEuRu78iTmUCxrf4A',
+    appId: '1:1052768843484:android:b54e85d9c42eee0a232619',
+    messagingSenderId: '1052768843484',
+    projectId: 'hand-7b138',
+    storageBucket: 'hand-7b138.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCxmn555wIQQR0Wok-3dXOzakLwkqoh__s',
-    appId: '1:22308309062:ios:ef91acd0bc0307f8452247',
-    messagingSenderId: '22308309062',
-    projectId: 'hand-14eb5',
-    storageBucket: 'hand-14eb5.appspot.com',
-    iosClientId: '22308309062-sr1qtv58afceisuap6jkcdc9q1p3lql2.apps.googleusercontent.com',
-    iosBundleId: 'com.muchirisapplication.app',
+    apiKey: 'AIzaSyBRBZexfFF0RcwshZ4drNbYXLmA0sZOzK4',
+    appId: '1:1052768843484:ios:d5350cd554a833d2232619',
+    messagingSenderId: '1052768843484',
+    projectId: 'hand-7b138',
+    storageBucket: 'hand-7b138.appspot.com',
+    iosClientId: '1052768843484-7tgubhhjsmpojjgec3puptus6dnp824p.apps.googleusercontent.com',
+    iosBundleId: 'com.hand.app',
   );
 }
