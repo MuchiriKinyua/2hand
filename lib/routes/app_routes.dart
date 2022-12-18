@@ -16,8 +16,6 @@ import '../presentation/homepage_screen/homepage_screen.dart';
 import '../presentation/mpesa_screen/mpesa_screen.dart';
 import '../presentation/post_items_screen/binding/post_items_binding.dart';
 import '../presentation/post_items_screen/post_items_screen.dart';
-import '../presentation/radio_screen/binding/radio_binding.dart';
-import '../presentation/radio_screen/radio_screen.dart';
 import '../presentation/tv_screen/binding/tv_binding.dart';
 import '../presentation/tv_screen/tv_screen.dart';
 
@@ -34,8 +32,6 @@ class AppRoutes {
 
   static String homepageScreen = '/homepage_screen';
 
-  static String radioScreen = '/radio_screen';
-
   static String appNavigationScreen = '/app_navigation_screen';
 
   static String tvScreen = '/tv_screen';
@@ -46,7 +42,7 @@ class AppRoutes {
 
   static List<GetPage> pages = [
     GetPage(
-      name: splashScreen,
+      name: initialRoute,
       page: () => SplashScreen(),
       bindings: [
         SplashBinding(),
@@ -78,13 +74,6 @@ class AppRoutes {
       page: () => PostItemsScreen(),
       bindings: [
         PostItemsBinding(),
-      ],
-    ),
-    GetPage(
-      name: radioScreen,
-      page: () => RadioScreen(),
-      bindings: [
-        RadioBinding(),
       ],
     ),
     GetPage(
