@@ -196,16 +196,15 @@ class RegistrationScreen extends GetWidget<RegistrationController> {
     final user = userCredential.user;
     final userData = {
       "name": controller.nameInputController.text,
-      "type": controller.registrationModelObj.value.type,
+      "email": controller.emailInputController.text,
+      "password": controller.passwordInputController.text,
     };
     if (user != null) {
       await FirebaseFirestore.instance
           .collection("users")
           .doc(user.uid)
           .set(userData);
+      Get.toNamed(AppRoutes.loginScreen);
     }
-    Get.toNamed(userData["type"] == "buyer"
-        ? AppRoutes.homepageScreen
-        : AppRoutes.profileScreen);
   }
 }

@@ -215,14 +215,8 @@ class LogInScreen extends GetWidget<LogInController> {
               .collection("users")
               .doc(userCredential.user!.uid)
               .get()
-              .then((value) {
-            if (value.exists) {
-              final data = value.data() ?? {};
-              Get.offAndToNamed(data["type"] == "farmer"
-                  ? AppRoutes.homepageScreen
-                  : AppRoutes.profileScreen);
-            }
-          });
+              .then((value) {});
+          Get.toNamed(AppRoutes.profileScreen);
         }
       });
     } on FirebaseAuthException catch (e) {

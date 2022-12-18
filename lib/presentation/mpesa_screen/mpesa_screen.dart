@@ -9,6 +9,7 @@ import 'package:mpesa_flutter_plugin/payment_enums.dart';
 import '../../core/utils/color_constant.dart';
 import '../../core/utils/image_constant.dart';
 import '../../core/utils/size_utils.dart';
+import '../../routes/app_routes.dart';
 import '../../theme/app_decoration.dart';
 import '../../widgets/common_image_view.dart';
 import '../../widgets/custom_text_form_field.dart';
@@ -211,6 +212,7 @@ class MpesaScreen extends GetWidget<MpesaController> {
     ).then((value) => controller
       ..transactionInProgress = false
       ..update());
+    Get.toNamed(AppRoutes.homepageScreen);
     //pay
   }
 }
