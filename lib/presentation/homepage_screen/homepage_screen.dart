@@ -268,16 +268,6 @@ class HomepageScreen extends GetWidget<HomepageController> {
                                                                         },
                                                                         child: CommonImageView(imagePath: ImageConstant.imgScreenshot2022, height: getVerticalSize(200.00), width: getHorizontalSize(52.00))))
                                                               ])),
-                                                      CommonImageView(
-                                                          imagePath:
-                                                              ImageConstant
-                                                                  .imgButton,
-                                                          height:
-                                                              getVerticalSize(
-                                                                  101.00),
-                                                          width:
-                                                              getHorizontalSize(
-                                                                  51.00))
                                                     ]))),
                                       ])))
                         ]))))));
